@@ -1,0 +1,27 @@
+<div class="block">
+    <ul>
+        <li>
+            <h1 class="text-color">Sign In</h1>
+        </li>
+        <li>
+            <input type="text" class="form-control" id="accountId" placeholder="User account Id">
+        </li>
+        <li>
+            <input type="password" class="form-control" id="accountPwd" placeholder="Account password">
+        </li>
+        <li style="color: #fff;">
+            <input type="checkbox" id="rememberCredentails"> Remember my credentails
+        </li>
+        <li>
+            <input type="button" value="Login" class="btn btn-primary btn-lg" onclick="validateUserCredentials()">
+        </li>
+        
+        <li>
+            <a href="#" onclick="loadSelectedPage('frgtpwd');" class="link text-color" >Forgot password?</a>
+            <a href="#"  onclick="loadSelectedPage('newsignup');" class="link text-color">Signup</a>
+        </li>
+        <LI class="invalidCredentials error">
+            Invalid Credentials
+        </LI>
+    </ul>
+</div>

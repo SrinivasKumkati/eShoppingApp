@@ -1,0 +1,45 @@
+<div class="adminPage">
+    <ul>
+        <li>
+            Product Name: <input type="text" id="title">
+        </li>
+        <li>
+            Price: <input type="number" id="price">
+        </li>
+        <li>
+            Category:
+            <select name="" id="category">
+                <option value="jewelery">Jewelery</option>
+                <option value="Stationary">Stationary</option>
+                <option value="men's clothing">Men's clothing</option>
+                <option value="women's clothing">Women's clothing</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mens Shoes">Mens Shoes</option>
+            </select>
+        </li>
+        <li>
+            Product Description:
+            <textarea name="" id="description" cols="20" rows="5"></textarea>
+        </li>
+        <li>
+            Rating:
+            <input type="number" id="rating">
+        </li>
+        <li>
+            Product Image: 
+            <form method ="POST"  enctype="multipart/form-data">
+                <input type="file" name="prodImage" multiple="multiple">
+                <input type="button" value="Upload Image" onclick="uploadProductImage()">
+            </form>
+        </li>
+        <li>
+            <button class="btn btn-primary" onclick="readProductDetails()">
+                Add Details
+            </button>
+        </li>
+        <li id="statusMsg">
+
+        </li>
+    </ul>
+
+</div>

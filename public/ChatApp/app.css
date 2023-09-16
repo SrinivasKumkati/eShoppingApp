@@ -1,0 +1,33 @@
+.chatBlock {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #ccc;
+}
+
+.msgBlock {
+    height: 300px;
+}
+
+.sendMsg{
+    color: green;
+    margin: 5px;
+}
+
+.receiveMsg {
+    color: blue;
+    text-align: right;
+    margin: 5px;
+}
+.btnBlock {
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+    padding: 10px;
+    
+}
+.btnBlock input[type=text] {
+    width: 180px;
+    height: 80px;
+}

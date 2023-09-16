@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "64eeaafe15093f1f360fcc35"
+  },
+  "accountId": "user_prasad",
+  "actPwd": "$2b$10$XZZfHVXZ7eSDeuj7eTjqY.T609EDeYmk2UqheXCGQJ764mgCCQO3K",
+  "mailid": "prasad@gmail.com",
+  "isAdmin": true
+},
+{
+  "_id": {
+    "$oid": "64eeaba07f6a39c28caad8bd"
+  },
+  "accountId": "test_user",
+  "actPwd": "$2b$04$2UtfR8YYYWe2DkUHNKk8TuuoMJDO4wVNPMUSx.BKH3GqbTaO5igVa",
+  "mailid": "testuser1@gmail.com",
+  "isAdmin": false
+}]

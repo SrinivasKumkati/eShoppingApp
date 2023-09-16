@@ -1,0 +1,25 @@
+<div >
+    <ul>
+        <li class="pTitle">
+            {{title}}
+        </li>
+        <li>
+            Price - {{price}}
+        </li>
+        <li class="productDesc" style="display: none;">
+            {{description}}
+        </li>
+        <li>
+            <img src="{{image}}" alt="">
+        </li>
+        <li id="rating_{{id}}" class="ratingContainer_block"></li>
+        <li>
+            <button class="btn btn-primary btn-sm" onclick="viewSingleProductData('{{id}}')">
+                Veiw details
+            </button>
+            <button class="btn btn-primary btn-sm" onclick="addProductToCart('{{id}}')">
+                Add to cart
+            </button>
+        </li>
+    </ul>
+</div>
