@@ -10,7 +10,6 @@ const storage = multer.diskStorage({
     // By default, multer removes file extensions so let's add them back
     filename: function(req, file, callback) { 
         file_path = "userImage" + '-' + Date.now() + path.extname(file.originalname);
-        
         callback(null, file_path);
     }
 });

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { MongoClient} = require("mongodb");
+const {MongoClient} = require("mongodb");
 const mongoClient = new MongoClient("mongodb://127.0.0.1:27017");
 
 async function getDbConnection(inputData) {
@@ -12,15 +12,13 @@ async function getDbConnection(inputData) {
     } else {
         return collection.find({}).toArray();
     }
-    
 }
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
     console.log(req.query);
     console.log("req.session.isUserLoggedIn");
-    console.log(req.session.isUserLoggedIn);
+    console.log(req.session.isUserLoggedIn); // ? 
     var productData = [];
     getDbConnection(req.query).then((response) => { 
         productData = response;

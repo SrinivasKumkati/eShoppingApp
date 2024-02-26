@@ -1,7 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var http = require("http");
+var http = require("http"); // http module is used to create server
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
@@ -17,20 +17,22 @@ var validateUserCredentialsRouter = require("./routes/userCredentialsValidator")
 var uploadResourceRouter = require("./routes/uploadresource");
 var checkUserLoginRouter = require("./routes/checkUserLogin");
 var logoutUser = require("./routes/logoutUser");
-const { Server } = require("socket.io");
+const { Server } = require("socket.io"); // Server is a property of socket.io object, {Server} is used to destructure the property from the object such that there is no need to write socket.io.Server
 const numCPUs = os.availableParallelism();
 var cluster = require("cluster");
 console.log("numCPUs -> " + numCPUs);
 console.log(cluster.isMaster);
 var count = 0;
-var app = express();
+var app = express(); // express is a function which returns an object
+
 var io, myServer;
 if (cluster.isMaster) {
   for (var i = 0 ;i < numCPUs; i++) {
     cluster.fork();
   }
 } else {
-  io = new Server(myServer);
+  // io = new Server(myServer); // io is an object
+  // io = new socket.io.Server(http.createServer(express())); 
   myServer = http.createServer(app);
   myServer.listen(3000, () => {
     console.log("server is listing to 3000 at process " + process.pid);

@@ -10,7 +10,6 @@ var readProductDetails  = () => {
 
     console.log(productDetails)
     sendDataToserver(productDetails);
-
 }
 
 
